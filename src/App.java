@@ -1,7 +1,6 @@
 import dataCollection.DataCollection;
 import model.Author;
 import model.Book;
-import java.util.ArrayList;
 public class App {
     private static DataCollection dataCollection = new DataCollection();
     public App() {

@@ -10,9 +10,6 @@ public class Book {
     private String genre;
     public ArrayList<Author> authors = new ArrayList<Author>();
 
-    public Book() {
-    }
-
     public Book(String name) {
         this.name = name;
     }
