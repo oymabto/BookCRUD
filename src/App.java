@@ -1,9 +1,7 @@
 import dataCollection.DataCollection;
 import model.Author;
 import model.Book;
-
 import java.util.ArrayList;
-
 public class App {
     private static DataCollection dataCollection = new DataCollection();
     public App() {
@@ -12,8 +10,6 @@ public class App {
         DataCollection.addNewBook("Le Pettit Prince");
     }
     public static void createModelObjects() {
-
-//        ArrayList<Book> bookArrayList = new ArrayList<Book>();
 
         Author jrrTolkien = new Author("J.R.R.", "Tolkien", 123);
         Author antonieDeSaintExupery = new Author("Antonie", "de Saint-Exupery", 456);
