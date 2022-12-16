@@ -31,14 +31,14 @@ public class DataCollection {
     }
 
     public static void addNewBook(String name) {
-        int count = 0;
+        boolean isNew = true;
         for (Book book : bookArrayList) {
             if (book.getName().equals(name)) {
                 System.out.print("\n\n\nThe book '" + name + "' is already exist in the list of books.");
-                count++;
+                isNew = false;
             }
         }
-        if (count == 0) {
+        if (isNew) {
             bookArrayList.add(new Book(name));
         }
         System.out.println(" The New DataCollection ArrayList:\n");
