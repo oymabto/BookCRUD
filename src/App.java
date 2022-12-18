@@ -1,14 +1,24 @@
 import dataCollection.DataCollection;
 import model.Author;
 import model.Book;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 public class App {
-    private static DataCollection dataCollection = new DataCollection();
+    private DataCollection dataCollection = new DataCollection();
+
     public App() {
         createModelObjects();
-        DataCollection.findBook("J.R.R.", "Tolkien");
-        DataCollection.addNewBook("Le Pettit Prince");
+        dataCollection.findBook("J.R.R.", "Tolkien");
+        dataCollection.addNewBook("Le Pettit Prince");
+        dataCollection.sortBooksBasedOnTheFirstPublishedYear();
+        dataCollection.sortBooksBasedOnTheBookName();
+        dataCollection.addBookUsingObjectEquals(new Book("Le Pettit Prince"));
     }
-    public static void createModelObjects() {
+
+    public void createModelObjects() {
 
         Author jrrTolkien = new Author("J.R.R.", "Tolkien", 123);
         Author antonieDeSaintExupery = new Author("Antonie", "de Saint-Exupery", 456);
